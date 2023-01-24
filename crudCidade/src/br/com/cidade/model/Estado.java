@@ -1,10 +1,12 @@
 package br.com.cidade.model;
 import java.util.*;
 
-public class Cidade {
+public class Estado {
     private UUID id;
-    private String Nome;
-    private Estado Estado;
+    private String nome;
+    private String sigla;
+
+    private Pais pais;
 
     public UUID getId() {
         return id;
@@ -15,16 +17,18 @@ public class Cidade {
     }
 
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
     public void setNome(String nome) {
-        Nome = nome;
+        this.nome = nome;
     }
 
-    public Estado getEstado() {
-        return Estado;
+    public String getSigla() {
+        return sigla;
     }
 
-
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
 }
