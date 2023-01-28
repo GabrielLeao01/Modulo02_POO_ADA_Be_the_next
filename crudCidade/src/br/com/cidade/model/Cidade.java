@@ -4,7 +4,7 @@ import java.util.*;
 public class Cidade {
     private UUID id;
     private String Nome;
-    private Estado Estado;
+    private Estado estado;
 
     public UUID getId() {
         return id;
@@ -21,9 +21,12 @@ public class Cidade {
     public void setNome(String nome) {
         Nome = nome;
     }
+    public void setEstado(Estado estado){
+        this.estado = estado;
+    }
 
     public Estado getEstado() {
-        return Estado;
+        return estado;
     }
 
 

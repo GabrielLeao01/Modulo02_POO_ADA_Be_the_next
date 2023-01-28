@@ -3,7 +3,7 @@ import br.com.cidade.controller.cidadeController;
 import br.com.cidade.model.Cidade;
 
 import java.util.*;
-public class armazenamentoVolatil implements cidadeController {
+public class CidadeArmazenamentoVolatil implements cidadeController {
     private Map<UUID,Cidade> cidades = new HashMap<>();
 
     @Override
