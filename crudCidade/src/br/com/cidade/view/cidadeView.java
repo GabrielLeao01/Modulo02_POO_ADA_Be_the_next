@@ -20,7 +20,7 @@ public class cidadeView {
         System.out.println("Selecione o id do estado no qual a cidade pertence: ");
         List<Estado> estados = controllerEstado.listar();
         int idEstado = sc.nextInt();
-        cidade.setEstado(estados.get(idEstado));
+        cidade.setEstado(estados.get(idEstado-1));
         controllerCidade.cadastrar(cidade);
     }
     public void cadastrarEstado(){
@@ -35,7 +35,7 @@ public class cidadeView {
         System.out.println("Selecione o id do pais no qual o estado pertence: ");
         List<Pais> paises = controllerPais.listar();
         int idPais = sc.nextInt();
-        estado.setPais(paises.get(idPais));
+        estado.setPais(paises.get(idPais-1));
         controllerEstado.cadastrar(estado);
     }
     public void cadastrarPais(){
@@ -58,17 +58,19 @@ public class cidadeView {
     public void listarEstado(){
         List<Estado> estados = controllerEstado.listar();
         for (int i = 0; i < estados.size(); i++) {
+            System.out.print("ID - "+ (i+1)+" - ");
             mostrarEstado(estados.get(i));
         }
     }
     public void listarPais(){
         List<Pais> paises = controllerPais.listar();
         for (int i = 0; i < paises.size(); i++) {
+            System.out.print("ID - "+ (i+1)+" - ");
             mostrarPais(paises.get(i));
         }
     }
     public void mostrarCidade(Cidade cidade){
-        System.out.println("Cidade: "+cidade.getNome()+" - Estado: "+cidade.getEstado().getNome());
+        System.out.println("Cidade: "+cidade.getNome()+" - Estado: "+cidade.getEstado().getNome()+" - Pais: "+cidade.getEstado().getPais().getNome());
 
     }
     public void mostrarEstado(Estado estado){
