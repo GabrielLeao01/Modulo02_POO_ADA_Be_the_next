@@ -1,5 +1,5 @@
 package br.com.cidade.controller.impl;
-import br.com.cidade.controller.cidadeController;
+import br.com.cidade.controller.cidade.cidadeController;
 import br.com.cidade.model.Cidade.Cidade;
 
 import java.util.*;
@@ -15,7 +15,7 @@ public class CidadeArmazenamentoVolatil implements cidadeController {
     @Override
     public Cidade ler(UUID id) {
         Cidade encontrada = cidades.get(id);
-        if(encontrada = null){
+        if(encontrada == null){
             throw new RuntimeException();
         }
         return encontrada;
@@ -27,7 +27,7 @@ public class CidadeArmazenamentoVolatil implements cidadeController {
     }
 
     @Override
-    public Void update(UUID id, Cidade cidade) {
+    public void update(UUID id, Cidade cidade) {
         if(cidades.containsKey(id)){
             cidades.put(id,cidade);
         }
@@ -39,7 +39,7 @@ public class CidadeArmazenamentoVolatil implements cidadeController {
     @Override
     public Cidade delete(UUID id) {
         Cidade apagada = cidades.remove(id);
-        if(apagada = null){
+        if(apagada == null){
             throw new RuntimeException();
         }
         return apagada;

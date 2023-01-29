@@ -1,4 +1,4 @@
-package br.com.cidade.controller;
+package br.com.cidade.controller.estado;
 import br.com.cidade.model.Estado.Estado;
 import java.util.*;
 public interface estadoController {

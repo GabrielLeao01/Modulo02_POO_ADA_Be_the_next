@@ -1,5 +1,5 @@
 package br.com.cidade.controller.impl;
-import br.com.cidade.controller.estadoController;
+import br.com.cidade.controller.estado.estadoController;
 import br.com.cidade.model.Estado.Estado;
 
 import java.util.*;

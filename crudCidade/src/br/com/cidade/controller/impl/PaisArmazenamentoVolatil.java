@@ -1,6 +1,6 @@
 package br.com.cidade.controller.impl;
 import java.util.*;
-import br.com.cidade.controller.paisController;
+import br.com.cidade.controller.pais.paisController;
 import br.com.cidade.model.Pais.Pais;
 
 public class PaisArmazenamentoVolatil implements paisController{

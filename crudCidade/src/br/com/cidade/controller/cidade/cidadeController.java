@@ -1,4 +1,4 @@
-package br.com.cidade.controller;
+package br.com.cidade.controller.cidade;
 import br.com.cidade.model.Cidade.Cidade;
 import java.util.*;
 public interface cidadeController {
@@ -8,7 +8,7 @@ public interface cidadeController {
 
     List<Cidade> listar();
 
-    Void update(UUID id, Cidade cidade);
+    void update(UUID id, Cidade cidade);
 
     Cidade delete(UUID id);
 
