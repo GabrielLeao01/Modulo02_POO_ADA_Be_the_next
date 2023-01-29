@@ -1,7 +1,10 @@
 package br.com.cidade.view;
 import br.com.cidade.controller.*;
 import br.com.cidade.controller.impl.*;
-import br.com.cidade.model.*;
+import br.com.cidade.model.Cidade.Cidade;
+import br.com.cidade.model.Estado.Estado;
+import br.com.cidade.model.Pais.Pais;
+
 import java.util.*;
 
 public class cidadeView {
@@ -82,59 +85,62 @@ public class cidadeView {
 
     }
     public void menu(){
-        System.out.println("Digite 1 para o menu de cidades, 2 para o menu de estados, 3 para o menu de paises ou 4 para sair");
+        System.out.println("Digite 1 para cadastrar, 2 para listar ou 3 para sair");
         int op = sc.nextInt();
         switch (op){
             case 1:
-                menuCidade();
+                menuCadastro();
                 break;
             case 2:
-                menuEstado();
+                menuListar();
                 break;
             case 3:
-                menuPais();
-            case 4:
                 System.exit(0);
             default:
                 System.out.println("Número invalido");
         }
         menu();
     }
-    public void menuCidade(){
-        System.out.println("Digite 1 para cadastrar uma cidade, 2 para listar as cidades existentes ou 3 para voltar");
+    public void menuCadastro(){
+        System.out.println("1 - Cadastrar uma cidade\n2 - Cadastrar um estado\n3 - Cadastrar um pais\n4- Voltar para o menu inicial");
         int op = sc.nextInt();
         switch (op){
             case 1:
                 cadastrarCidade();
                 break;
             case 2:
-                listarCidade();
+                cadastrarEstado();
                 break;
             case 3:
+                cadastrarPais();
+                break;
+            case 4:
                 menu();
                 break;
             default:
                 System.out.println("Número invalido");
         }
-        menuCidade();
+        menuCadastro();
     }
-    public void menuEstado(){
-        System.out.println("Digite 1 para cadastrar um estado, 2 para listar os estados existentes ou 3 para voltar");
+    public void menuListar(){
+        System.out.println("1 - Listar cidades\n2 - Listar estados\n3 - Listar paises\n4- Voltar para o menu inicial");
         int op = sc.nextInt();
         switch (op){
             case 1:
-                cadastrarEstado();
+                listarCidade();
                 break;
             case 2:
                 listarEstado();
                 break;
             case 3:
-                menu();
+                listarPais();
                 break;
+            case 4:
+                menu();
             default:
                 System.out.println("Número invalido");
         }
-        menuEstado();
+        menuListar();
     }
     public void menuPais(){
         System.out.println("Digite 1 para cadastrar um pais, 2 para listar os paises existentes ou 3 para voltar");

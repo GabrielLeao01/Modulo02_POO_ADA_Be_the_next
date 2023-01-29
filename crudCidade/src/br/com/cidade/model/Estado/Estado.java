@@ -1,9 +1,22 @@
-package br.com.cidade.model;
+package br.com.cidade.model.Estado;
+import br.com.cidade.model.Pais.Pais;
+
 import java.util.*;
-public class Pais {
+
+public class Estado {
     private UUID id;
     private String nome;
     private String sigla;
+
+    private Pais pais;
+
+    public Pais getPais() {
+        return pais;
+    }
+
+    public void setPais(Pais pais) {
+        this.pais = pais;
+    }
 
     public UUID getId() {
         return id;

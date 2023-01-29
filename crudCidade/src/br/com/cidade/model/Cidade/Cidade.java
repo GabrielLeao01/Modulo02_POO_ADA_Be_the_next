@@ -1,4 +1,6 @@
-package br.com.cidade.model;
+package br.com.cidade.model.Cidade;
+import br.com.cidade.model.Estado.Estado;
+
 import java.util.*;
 
 public class Cidade {
