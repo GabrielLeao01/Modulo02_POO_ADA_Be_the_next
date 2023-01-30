@@ -7,7 +7,7 @@ public interface paisController {
     void ler(UUID id);
     List<Pais> listar();
 
-    Void update(UUID id, Pais pais);
+    void update(UUID id, Pais pais);
 
     Pais delete(UUID id);
 }

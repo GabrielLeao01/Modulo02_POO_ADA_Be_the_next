@@ -1,10 +1,11 @@
-package br.com.cidade.model.Pais.dao;
+package br.com.cidade.model.Pais.dao.impl;
 
 import br.com.cidade.controller.arquivo.EscritorArquivo;
 import br.com.cidade.controller.arquivo.LeitorArquivo;
 import br.com.cidade.model.Cidade.dao.DAOException;
 import br.com.cidade.model.Estado.Estado;
 import br.com.cidade.model.Pais.Pais;
+import br.com.cidade.model.Pais.dao.PaisDAO;
 
 import java.io.IOException;
 import java.util.Collections;
@@ -12,7 +13,7 @@ import java.util.List;
 import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
-public class PaisArquivoDAO implements PaisDAO{
+public class PaisArquivoDAO implements PaisDAO {
     private EscritorArquivo<Pais> escritor;
     private LeitorArquivo<Pais> leitor;
     public PaisArquivoDAO(EscritorArquivo<Pais> escritor,LeitorArquivo<Pais> leitor) {
