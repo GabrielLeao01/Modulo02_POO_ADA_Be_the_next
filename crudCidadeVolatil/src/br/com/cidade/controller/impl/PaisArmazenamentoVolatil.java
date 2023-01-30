@@ -12,7 +12,35 @@ public class PaisArmazenamentoVolatil implements paisController{
     }
 
     @Override
+    public Pais ler(UUID id) {
+        Pais encontrado = paises.get(id);
+        if(encontrado == null){
+            throw new RuntimeException();
+        }
+        return encontrado;
+    }
+
+    @Override
     public List<Pais> listar() {
         return new ArrayList<>(paises.values());
+    }
+
+    @Override
+    public void update(UUID id, Pais pais) {
+        if(paises.containsKey(id)){
+            paises.put(id,pais);
+        }
+        else{
+            throw new RuntimeException();
+        }
+    }
+
+    @Override
+    public Pais delete(UUID id) {
+        Pais apagado = paises.remove(id);
+        if (apagado == null) {
+            throw new RuntimeException();
+        }
+        return apagado;
     }
 }

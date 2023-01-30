@@ -1,10 +1,10 @@
-package br.com.cidade.controller.estado;
-import br.com.cidade.model.Estado.Estado;
+package br.com.cidade.controller;
+import br.com.cidade.model.Estado;
 import java.util.*;
 public interface estadoController {
     void cadastrar(Estado estado);
 
-    void ler(UUID id);
+    Estado ler(UUID id);
 
     List<Estado> listar();
 

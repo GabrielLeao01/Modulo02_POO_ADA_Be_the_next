@@ -13,7 +13,35 @@ public class EstadoArmazenamentoVolatil implements estadoController{
     }
 
     @Override
+    public Estado ler(UUID id) {
+        Estado encontrado = estados.get(id);
+        if(encontrado == null){
+            throw new RuntimeException();
+        }
+        return encontrado;
+    }
+
+    @Override
     public List<Estado> listar() {
         return new ArrayList<>(estados.values());
+    }
+
+    @Override
+    public void update(UUID id, Estado estado) {
+        if(estados.containsKey(id)){
+            estados.put(id,estado);
+        }
+        else{
+            throw new RuntimeException();
+        }
+    }
+
+    @Override
+    public Estado delete(UUID id) {
+        Estado apagado = estados.remove(id);
+        if (apagado == null) {
+            throw new RuntimeException();
+        }
+        return apagado;
     }
 }
